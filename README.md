@@ -8,6 +8,7 @@ Thank you for your support and understanding.
 
 ## 📆 TODO
 - [x] Publication of a paper
+- [ ] Granting of a license
 - [ ] Release tile image generation code
 - [ ] Release of evaluation code
 - [ ] Release Streamlit-based screening workflow
