@@ -1,9 +1,19 @@
 # GynAIe
+<div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="/assets/GynAIe_logo.PNG">
+  <img alt="exo logo" src="/assets/GynAIe_logo.PNG" width="30%" height="30%">
+</picture> 
+
+</div>
+
 **GynAIe**: Pronounced "Genie" (/ˈdʒiːni/)  
 The name **"GynAIe"** is a blend of **"Gynecology"** and **"AI"**. We've chosen to pronounce it as "Genie" (/ˈdʒiːni/) to emphasize the magical assistance it provides in the field of gynecology.
 
 
 ## 🤩 Updates
+- **`2024/08/24`**: The logo has been uploaded!
 - **`2024/08/23`**: Our paper entitled "Enhancing cervical cancer cytology screening via artificial intelligence innovation" has been published in *Scientific Reports*. You can access the paper [here](https://doi.org/10.1038/s41598-024-70670-6)!
 
 ## 🙇🏻‍♂️ Note to Users
