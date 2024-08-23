@@ -7,6 +7,7 @@ Please be advised that this project is managed solely by me. As such, updates to
 Thank you for your support and understanding.
 
 ## 📆 TODO
+- [x] Publication of a paper
 - [ ] Release tile image generation code
 - [ ] Release of evaluation code
 - [ ] Release Streamlit-based screening workflow
