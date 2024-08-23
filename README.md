@@ -1,3 +1,8 @@
+# GynAIe
+**GynAIe**: Pronounced "Genie" (/ˈdʒiːni/)  
+The name **"GynAIe"** is a blend of **"Gynecology"** and **"AI"**. We've chosen to pronounce it as "Genie" (/ˈdʒiːni/) to emphasize the magical assistance it provides in the field of gynecology.
+
+
 ## 🤩 Updates
 - **`2024/08/23`**: Our paper entitled "Enhancing cervical cancer cytology screening via artificial intelligence innovation" has been published in *Scientific Reports*. You can access the paper [here](https://doi.org/10.1038/s41598-024-70670-6)!
 
@@ -10,7 +15,7 @@ Thank you for your support and understanding.
 - [x] Publication of a paper
 - [ ] Granting of a license
 - [ ] Release tile image generation code
-- [ ] Release of evaluation code
+- [ ] Release of code for screening
 - [ ] Release Streamlit-based screening workflow
 
 ## 🎉 Citation
