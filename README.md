@@ -6,6 +6,8 @@
   <img alt="exo logo" src="/assets/GynAIe_logo.PNG" width="30%" height="30%">
 </picture> 
 
+**"Magical AI for women worldwide."**
+
 </div>
 
 **GynAIe**: Pronounced "Genie" (/ˈdʒiːni/)  
