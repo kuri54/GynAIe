@@ -15,7 +15,7 @@ The name **"GynAIe"** is a blend of **"Gynecology"** and **"AI"**. We've chosen 
 
 
 ## 🤩 Updates
-- **`2024/08/25`**: Added the paper's highlights and images!
+- **`2024/08/25`**: Added paper highlights and images!
 - **`2024/08/24`**: The logo has been uploaded!
 - **`2024/08/22`**: Our paper entitled "Enhancing cervical cancer cytology screening via artificial intelligence innovation" has been published in *Scientific Reports*. You can access the paper [here](https://doi.org/10.1038/s41598-024-70670-6)!
 
