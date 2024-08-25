@@ -15,6 +15,7 @@ The name **"GynAIe"** is a blend of **"Gynecology"** and **"AI"**. We've chosen 
 
 
 ## 🤩 Updates
+- **`2024/08/25`**: Added the paper's highlights and images!
 - **`2024/08/24`**: The logo has been uploaded!
 - **`2024/08/22`**: Our paper entitled "Enhancing cervical cancer cytology screening via artificial intelligence innovation" has been published in *Scientific Reports*. You can access the paper [here](https://doi.org/10.1038/s41598-024-70670-6)!
 
@@ -22,6 +23,23 @@ The name **"GynAIe"** is a blend of **"Gynecology"** and **"AI"**. We've chosen 
 Please be advised that this project is managed solely by me. As such, updates to the code and responses to issues may take some time. I appreciate your patience and understanding as I work to make this project as useful and robust as possible. Your feedback and contributions are always welcome and highly valued.
 
 Thank you for your support and understanding.
+
+## ✨ Highlights
+- Developed an AI-integrated workflow for cervical cytology screening that reduces screening time to approximately 10 seconds per case and significantly lessens the workload on cytologists.
+- Implemented a visual language model that enhances the identification of high-risk cases by prioritizing cases based on anomaly scores and targeting review efforts accordingly.
+- Demonstrated the potential of AI technology to improve the efficiency and accuracy of cytological examinations, contributing to faster diagnosis and treatment of cervical cancer.
+
+<p>
+    <picture>
+        <img alt="overview workflow" src="assets/Overview_workflow.jpg" width="90%" height="90%">
+    </picture>
+</p>
+
+<p>
+    <picture>
+        <img alt="result" src="assets/Result.jpg" width="70%" height="70%">
+    </picture>
+</p>
 
 ## 📆 TODO
 - [x] Publication of a paper
