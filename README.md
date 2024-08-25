@@ -44,8 +44,10 @@ Thank you for your support and understanding.
 ## 📆 TODO
 - [x] Publication of a paper
 - [ ] Granting of a license
-- [ ] Release tile image generation code
-- [ ] Release of code for screening
+- [ ] Release usage documentation
+  - [ ] Add requirements
+  - [ ] Tile image generation code
+  - [ ] Screening code
 - [ ] Release Streamlit-based screening workflow
 
 ## 🎉 Citation
