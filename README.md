@@ -43,6 +43,7 @@ Thank you for your support and understanding.
 
 ## 📆 TODO
 - [x] Publication of a paper
+- [x] Add paper highlights and images
 - [ ] Granting of a license
 - [ ] Release usage documentation
   - [ ] Add requirements
