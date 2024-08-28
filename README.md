@@ -15,6 +15,7 @@ The name **"GynAIe"** is a blend of **"Gynecology"** and **"AI"**. We've chosen 
 
 
 ## 🤩 Updates
+- **`2024/08/28`**: Released [part of the Usage](#generating-tile-images) documentation. This includes instructions on generating tile images from WSI using specified parameters. More detailed usage instructions will be provided in future updates.
 - **`2024/08/25`**: Added paper highlights and images!
 - **`2024/08/24`**: The logo has been uploaded!
 - **`2024/08/22`**: Our paper entitled "Enhancing cervical cancer cytology screening via artificial intelligence innovation" has been published in *Scientific Reports*. You can access the paper [here](https://doi.org/10.1038/s41598-024-70670-6)!
@@ -41,13 +42,28 @@ Thank you for your support and understanding.
     </picture>
 </p>
 
+## Usage
+It is recommended to use a virtual environment of your choice, such as Docker.
+
+### Generating Tile Images
+Access this [link](https://github.com/kuri54/Preprocessing-WSI) to generate tile images from WSI (Whole Slide Image).  
+This process can also be done on a local machine, but the processing speed will depend on the CPU performance.  
+<br>
+The tile images in the paper were generated with the following parameters:  
+```bash
+python preprocessing.py -u 0.3 -s 1024  
+```
+<br>
+
+**More usage instructions will be updated periodically. Please generate the tile images and stay tuned!**
+
 ## 📆 TODO
 - [x] Publication of a paper
 - [x] Add paper highlights and images
 - [ ] Granting of a license
 - [ ] Release usage documentation
   - [ ] Add requirements
-  - [ ] Tile image generation code
+  - [x] Tile image generation code
   - [ ] Screening code
 - [ ] Release Streamlit-based screening workflow
 
