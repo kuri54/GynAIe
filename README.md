@@ -15,6 +15,7 @@ The name **"GynAIe"** is a blend of **"Gynecology"** and **"AI"**. We've chosen 
 
 
 ## 🤩 Updates
+- **`2024/08/30`**: Released model! [Hugging Face Model](https://huggingface.co/kuri54/GynAIe-preview-clip-vit-large-patch14-336-8bit)
 - **`2024/08/28`**: Released [part of the Usage](#generating-tile-images) documentation. This includes instructions on generating tile images from WSI using specified parameters. More detailed usage instructions will be provided in future updates.
 - **`2024/08/25`**: Added paper highlights and images!
 - **`2024/08/24`**: The logo has been uploaded!
@@ -60,6 +61,7 @@ python preprocessing.py -u 0.3 -s 1024
 ## 📆 TODO
 - [x] Publication of a paper
 - [x] Add paper highlights and images
+- [x] Release model
 - [ ] Granting of a license
 - [ ] Release usage documentation
   - [ ] Add requirements
