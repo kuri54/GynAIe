@@ -1,6 +1,7 @@
 import os
 import argparse
 from gynaie.calcuate_anomaly_score import CalcAnomalyScore
+from gynaie.check import notification_message
 from gynaie.util import get_image_path_to_df, get_model_id, get_label, print_logo, save_df
 from gynaie.sereening import Evaluater
 from gynaie.viz import Vis
@@ -43,6 +44,8 @@ def main():
     vis.run_vis()
 
     save_df(result_df, calculated_df, args.result_dir, case_name)
+
+    notification_message(f'{case_df['case'].nunique()} cases have been successfully screening! \nCheck the output files for detailed results.')
 
 if __name__ == '__main__':
     args = parser.parse_args()
