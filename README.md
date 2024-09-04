@@ -68,20 +68,22 @@ python preprocessing.py -u 0.3 -s 1024
 
 2. **Arranging tile images and creating a CSV file**
    -  Organize the generated tile images as illustrated below:
+  <pre>
         .
         └── GynAIe/
             └── input/
-                ├── 20240904/
-                │   ├── c202400001/
-                │   │   ├── c202400001_1.jpg
-                │   │   ├── c202400001_2.jpg
-                │   │   └── c202400001_3.jpg
-                │   └── c202400002/
-                │       ├── c202400002_1.jpg
-                │       ├── c202400002_2.jpg
-                │       └── c202400002_3.jpg
-                └── 20240904.csv
-
+                └── 20240904/
+                    ├── c202400001/
+                    │   ├── c202400001_1.jpg
+                    │   ├── c202400001_2.jpg
+                    │   └── c202400001_3.jpg
+                    ├── c202400002/
+                    │   ├── c202400002_1.jpg
+                    │   ├── c202400002_2.jpg
+                    │   └── c202400002_3.jpg
+                    └── 20240904.csv
+  </pre>
+    
     - It is recommended to create a directory named `input`, under which you should place directories containing tile images for each screening case group.
 
     - Create a CSV file detailing the specifics of each case and place it in the directory where the tile images are stored. Ensure the following for the CSV file:
