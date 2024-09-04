@@ -38,7 +38,6 @@ def main():
                                           )
 
     calculated_df = calc_anomaly_score.run_calc()
-    print(calculated_df)
 
     vis = Vis(calculated_df, args.sort_by, args.sort_ascending, args.result_dir, case_name)
     vis.run_vis()
