@@ -52,7 +52,6 @@ The tile images in the paper were generated with the following parameters:
 ```bash
 python preprocessing.py -u 0.3 -s 1024  
 ```
-<br>
 
 ### Screening
 1. **Installation**: 
@@ -104,6 +103,15 @@ python preprocessing.py -u 0.3 -s 1024
     ```bash
     python3 main.py --input_dir input/20240904
     ```
+
+4. Checking the results
+   After successfully running `main.py`, a directory named `result` will be created. This directory contains the following outputs:
+    
+    - **Sorted Images**: Images displaying the sorted cases based on the screening results, illustrating how each case ranks according to the evaluated criteria.
+    - **result.csv**: A data file containing all the decision data for each image.
+    - **calculated.csv**: A file derived from `result.csv` that calculates additional metrics such as anomaly scores.
+
+    **Please review the contents of the `result` directory to evaluate the screening outcomes.**
 
 
 ## 📆 TODO
