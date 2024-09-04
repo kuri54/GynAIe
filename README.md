@@ -110,7 +110,7 @@ python preprocessing.py -u 0.3 -s 1024
 - [x] Release usage documentation
   - [x] Add requirements
   - [x] Tile image generation code
-  - [ x Screening code
+  - [x] Screening code
 - [ ] Release Streamlit-based screening workflow
 
 ## 🎉 Citation
