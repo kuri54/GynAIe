@@ -92,7 +92,7 @@ python preprocessing.py -u 0.3 -s 1024
         | case       | age |
         | ---------- | --- |
         | c202400001 | 35  |
-        | c202400001 | 88  |
+        | c202400002 | 88  |
 
 3. Running the code
     To execute the model, use the following command in your terminal. This command runs the `main.py` script and specifies the input directory where your tile images are stored:
