@@ -1,0 +1,13 @@
+accelerate
+bitsandbytes
+matplotlib
+natsort
+numpy
+pandas
+pillow
+rich
+scikit-learn
+seaborn
+torch
+tqdm
+transformers
