@@ -44,6 +44,18 @@ Please refer to the Usage section to ensure your setup is correct and to effecti
 ## Usage
 It is recommended to use a virtual environment of your choice, such as Docker.
 
+### Usage Overview
+
+To effectively utilize the screening code, follow these major steps:
+
+1. [**Generating tile images**](#generating-tile-images): Start by generating tile images from your source data, which will be used for the screening process.
+2. [**Setup**](#setup): Prepare your environment and organize the necessary input data, including the tile images, as outlined in the setup instructions.
+3. [**Running the code**](#screening): Execute the `main.py` script to perform the screening based on the prepared inputs.
+4. [**Checking the results**](#screening): After running the script, examine the outputs in the `result` directory to evaluate the screening outcomes.
+
+Each of these steps is detailed further in the following sections, ensuring you have all the information needed to successfully deploy and use the screening model.  
+<br>
+
 ### Generating Tile Images
 Access this [link](https://github.com/kuri54/Preprocessing-WSI) to generate tile images from WSI (Whole Slide Image).  
 This process can also be done on a local machine, but the processing speed will depend on the CPU performance.  
@@ -52,8 +64,9 @@ The tile images in the paper were generated with the following parameters:
 ```bash
 python preprocessing.py -u 0.3 -s 1024  
 ```
+<br>
 
-### Screening
+### Setup
 1. **Installation**: 
    - Clone this repository.
    - Navigate to the cloned directory.
@@ -96,18 +109,20 @@ python preprocessing.py -u 0.3 -s 1024
         | ---------- | --- |
         | c202400001 | 35  |
         | c202400002 | 88  |
+<br>
 
-3. Running the code
+### Screening
+1. Running the code
     To execute the model, use the following command in your terminal. This command runs the `main.py` script and specifies the input directory where your tile images are stored:
 
     ```bash
     python3 main.py --input_dir input/20240904
     ```
 
-4. Checking the results
+2. Checking the results
    After successfully running `main.py`, a directory named `result` will be created. This directory contains the following outputs:
     
-    - **Sorted Images**: Images displaying the sorted cases based on the screening results, illustrating how each case ranks according to the evaluated criteria.
+    - **Sorted images**: Images displaying the sorted cases based on the screening results, illustrating how each case ranks according to the evaluated criteria.
     - **result.csv**: A data file containing all the decision data for each image.
     - **calculated.csv**: A file derived from `result.csv` that calculates additional metrics such as anomaly scores.
 
