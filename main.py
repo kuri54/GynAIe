@@ -3,7 +3,7 @@ import argparse
 from gynaie.calcuate_anomaly_score import CalcAnomalyScore
 from gynaie.check import log_message
 from gynaie.util import get_image_path_to_df, get_model_id, get_label, print_logo, save_df
-from gynaie.sereening import Evaluater
+from gynaie.screening import Evaluater
 from gynaie.viz import Vis
 
 parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)

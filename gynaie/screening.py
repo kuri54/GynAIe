@@ -60,8 +60,7 @@ class Evaluater():
                 inputs.to(model.device)
 
                 outputs = model(pixel_values=inputs['pixel_values'].squeeze(),
-                                input_ids=inputs['input_ids'][0].squeeze(),
-                                attention_mask=inputs['attention_mask'][0].squeeze(),
+                                input_ids=inputs['input_ids'][0].squeeze()
                                 )
 
                 logits_per_image = outputs.logits_per_image  # this is the image-text similarity score
