@@ -6,7 +6,7 @@ from rich.progress import track
 from sklearn.metrics import *
 from tqdm import tqdm
 from transformers import CLIPModel, CLIPProcessor
-from gynaie.check import notification_message
+from gynaie.check import log_message
 
 class CLIPDataset(Dataset):
     def __init__(self, df, label, processor):
@@ -38,7 +38,7 @@ class Evaluater():
 
     def create_dataloader(self, processor):
         dataset = CLIPDataset(self.df, self.label, processor)
-        notification_message(f'Number of images processes: {len(dataset)}')
+        log_message(f'Number of images processes: {len(dataset)}', 'notice')
 
         data_loader = DataLoader(dataset,
                                  batch_size=self.batch_size,

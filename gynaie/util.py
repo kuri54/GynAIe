@@ -4,7 +4,7 @@ from pathlib import Path
 from gynaie.check import handle_error_and_exit, check_supported_model, check_csv_exists
 from gynaie.check import check_single_csv, check_csv_name_matches_directory, check_case_counts_match
 from gynaie.models import base_model
-from gynaie.check import pass_message, notification_message
+from gynaie.check import log_message
 
 def print_logo():
     logo = r"""
@@ -28,25 +28,25 @@ def get_image_path_to_df(input_dir):
     # Ensure there is at least one CSV file in the directory.
     try:
         check_csv_exists(case_csv)
-        pass_message('CSV file successfully located.')
+        log_message('CSV file successfully located.', 'success')
     except Exception:
         handle_error_and_exit()
 
     # Ensure there is exactly one CSV file in the directory.
     try:
         check_single_csv(case_csv)
-        pass_message('Exactly one CSV file found, proceeding with processing.')
+        log_message('Exactly one CSV file found, proceeding with processing.', 'success')
     except Exception:
         handle_error_and_exit()
 
     case_df = pd.read_csv(str(case_csv[0]))
     case_name = case_csv[0].stem
-    notification_message(f'Case: {case_name}')
+    log_message(f'Case: {case_name}', 'notice')
 
     # Validate that CSV name matches the directory name.
     try:
         check_csv_name_matches_directory(input_dir, case_name)
-        pass_message('CSV file name matches the directory name.')
+        log_message('CSV file name matches the directory name.', 'success')
     except Exception:
         handle_error_and_exit()
 
@@ -62,8 +62,8 @@ def get_image_path_to_df(input_dir):
     # Check for consistency between case counts in CSV and extracted paths.
     try:
         check_case_counts_match(case_df, path_df)
-        pass_message('Case counts in the CSV match the unique case entries in the path data.')
-        notification_message(f"Number of cases: {len(path_df['case'].unique())}")
+        log_message('Case counts in the CSV match the unique case entries in the path data.', 'success')
+        log_message(f"Number of cases: {len(path_df['case'].unique())}", 'notice')
     except Exception:
         handle_error_and_exit()
 
@@ -71,7 +71,7 @@ def get_image_path_to_df(input_dir):
 
 def get_model_id(model_name):
     check_supported_model(model_name) # Check if the model name is supported.
-    notification_message(f'Model: {model_name}')
+    log_message(f'Model: {model_name}', 'notice')
 
     return base_model.get(model_name, {}).get('model_id')
 

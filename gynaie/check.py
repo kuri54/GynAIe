@@ -4,23 +4,28 @@ from rich.console import Console
 from gynaie.models import base_model, get_supported_models
 
 console = Console()
-def error_message(message):
-    # console.print(message, style='bold red')
-    console.log(message, style='bold red')
+def log_message(message, level='info'):
+    styles = {'info': 'white',
+              'success': 'bold green',
+              'error': 'bold red',
+              'notice': 'bold yellow'
+              }
+    prefixes = {'info': '',
+                'success': ':green_circle: Success! ',
+                'error': ':red_circle: ',
+                'notice': ':yellow_circle: Notice '
+                }
 
-def pass_message(message):
-    #  console.print(message, style='bold green')
-    console.log(f'Success! {message}', style='bold green')
-
-def notification_message(message):
-    # console.print(message)
-    console.log(f'Notice {message}', style='bold yellow')
+    style = styles.get(level, 'white')
+    prefix = prefixes.get(level, '')
+    formatted_message = f"{prefix}{message}"
+    console.log(formatted_message, style=style)
 
 def handle_error_and_exit():
     tb = traceback.format_exc()
     last_line = tb.strip().split('\n')[-1]
     # print(last_line)
-    error_message(last_line)
+    log_message(last_line, 'error')
     sys.exit(1)
 
 def check_supported_model(model_name):
