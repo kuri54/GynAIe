@@ -4,7 +4,6 @@ from torch.utils.data import DataLoader, Dataset
 from PIL import Image
 from rich.progress import track
 from sklearn.metrics import *
-from tqdm import tqdm
 from transformers import AutoModel, AutoProcessor
 from gynaie.check import log_message
 
@@ -31,7 +30,7 @@ class Evaluater():
         self.num_workers = num_workers
 
     def create_model_preprocess(self):
-        model = AutoModel.from_pretrained(self.model_id)
+        model = AutoModel.from_pretrained(self.model_id, device_map='auto')
         processor = AutoProcessor.from_pretrained(self.model_id)
 
         return model, processor
