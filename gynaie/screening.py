@@ -5,7 +5,7 @@ from PIL import Image
 from rich.progress import track
 from sklearn.metrics import *
 from tqdm import tqdm
-from transformers import CLIPModel, CLIPProcessor
+from transformers import AutoModel, AutoProcessor
 from gynaie.check import log_message
 
 class CLIPDataset(Dataset):
@@ -31,8 +31,8 @@ class Evaluater():
         self.num_workers = num_workers
 
     def create_model_preprocess(self):
-        model = CLIPModel.from_pretrained(self.model_id, device_map='cuda')
-        processor = CLIPProcessor.from_pretrained(self.model_id)
+        model = AutoModel.from_pretrained(self.model_id)
+        processor = AutoProcessor.from_pretrained(self.model_id)
 
         return model, processor
 
@@ -57,8 +57,6 @@ class Evaluater():
         # for inputs in tqdm(data_loader):
         for inputs in track(data_loader):
             with torch.no_grad():
-                inputs.to(model.device)
-
                 outputs = model(pixel_values=inputs['pixel_values'].squeeze(),
                                 input_ids=inputs['input_ids'][0].squeeze()
                                 )
