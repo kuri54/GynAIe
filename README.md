@@ -42,10 +42,10 @@ Please refer to the Usage section to ensure your setup is correct and to effecti
     </picture>
 </p>
 
-## Usage
+## 💡Usage
 It is recommended to use a virtual environment of your choice, such as Docker.
 
-### Usage Overview
+### 👀 Usage Overview
 
 To effectively utilize the screening code, follow these major steps:
 
@@ -58,7 +58,7 @@ To effectively utilize the screening code, follow these major steps:
 Each of these steps is detailed further in the following sections, ensuring you have all the information needed to successfully deploy and use the screening model.  
 <br>
 
-### Generating Tile Images
+### ✂️ Generating Tile Images
 Access this [link](https://github.com/kuri54/Preprocessing-WSI) to generate tile images from WSI (Whole Slide Image).  
 This process can also be done on a local machine, but the processing speed will depend on the CPU performance.  
 <br>
@@ -68,7 +68,7 @@ python preprocessing.py -u 0.3 -s 1024
 ```
 <br>
 
-### Setup
+### 💻 Setup
 1. **Installation**: 
    - Clone this repository.
    - Navigate to the cloned directory.
@@ -113,7 +113,7 @@ python preprocessing.py -u 0.3 -s 1024
         | c202400002 | 88  |
 <br>
 
-### Screening
+### 🔬 Screening
 1. Running the code
     To execute the model, use the following command in your terminal. This command runs the `main.py` script and specifies the input directory where your tile images are stored:
 
@@ -131,7 +131,7 @@ python preprocessing.py -u 0.3 -s 1024
     **Please review the contents of the `result` directory to evaluate the screening outcomes.**
 <br>
 
-### Customizable parameters
+### 🛠️ Customizable parameters
 
 <details><summary>The following parameters can be adjusted to customize the behavior of the script according to your specific needs:</summary>
 
