@@ -15,12 +15,12 @@ The name **"GynAIe"** is a blend of **"Gynecology"** and **"AI"**. We've chosen 
 
 
 ## 🤩 Updates
-- **`2024/09/06`**: Released instructions for using custom parameters! Detailed steps on how to apply these parameters in the `main.py` script are available in the [Usage section](#customizable-parameters) of our README.
-- **`2024/09/04`**: Released the code for conducting screening! Detailed steps on how to run the script are now available in the [Usage section](#screening) of our README.
+- **`2024/09/06`**: Released instructions for using custom parameters! Detailed steps on how to apply these parameters in the `main.py` script are available in the [Usage section](#%EF%B8%8F-customizable-parameters) of our README.
+- **`2024/09/04`**: Released the code for conducting screening! Detailed steps on how to run the script are now available in the [Usage section](#-screening) of our README.
 Please refer to the Usage section to ensure your setup is correct and to effectively use the screening code.
 - **`2024/09/01`**: Licensed under **Apache v2**. Please note, the model itself is licensed under **CC-BY-NC-SA-4.0**, so please be cautious about its use.
 - **`2024/08/30`**: Released model! [Hugging Face Model](https://huggingface.co/kuri54/GynAIe-preview-clip-vit-large-patch14-336-8bit)
-- **`2024/08/28`**: Released [part of the Usage](#generating-tile-images) documentation. This includes instructions on generating tile images from WSI using specified parameters. More detailed usage instructions will be provided in future updates.
+- **`2024/08/28`**: Released [part of the Usage](#%EF%B8%8F-generating-tile-images) documentation. This includes instructions on generating tile images from WSI using specified parameters. More detailed usage instructions will be provided in future updates.
 - **`2024/08/25`**: Added paper highlights and images!
 - **`2024/08/24`**: The logo has been uploaded!
 - **`2024/08/22`**: Our paper entitled "Enhancing cervical cancer cytology screening via artificial intelligence innovation" has been published in *Scientific Reports*. You can access the paper [here](https://doi.org/10.1038/s41598-024-70670-6)!
@@ -49,11 +49,11 @@ It is recommended to use a virtual environment of your choice, such as Docker.
 
 To effectively utilize the screening code, follow these major steps:
 
-1. [**Generating tile images**](#generating-tile-images): Start by generating tile images from your source data, which will be used for the screening process.
-2. [**Setup**](#setup): Prepare your environment and organize the necessary input data, including the tile images, as outlined in the setup instructions.
-3. [**Running the code**](#screening): Execute the `main.py` script to perform the screening based on the prepared inputs.
-4. [**Checking the results**](#screening): After running the script, examine the outputs in the `result` directory to evaluate the screening outcomes.
-5. [**Using custom parameters**](#customizable-parameters): Customize your screening process by adjusting various parameters available in the `main.py` script. This section guides you on how to modify parameters such as model selection, batch size, number of workers, and sorting criteria to tailor the analysis to your specific requirements.  
+1. [**Generating tile images**](#%EF%B8%8F-generating-tile-images): Start by generating tile images from your source data, which will be used for the screening process.
+2. [**Setup**](#-setup): Prepare your environment and organize the necessary input data, including the tile images, as outlined in the setup instructions.
+3. [**Running the code**](#-screening): Execute the `main.py` script to perform the screening based on the prepared inputs.
+4. [**Checking the results**](#-screening): After running the script, examine the outputs in the `result` directory to evaluate the screening outcomes.
+5. [**Using custom parameters**](#%EF%B8%8F-customizable-parameters): Customize your screening process by adjusting various parameters available in the `main.py` script. This section guides you on how to modify parameters such as model selection, batch size, number of workers, and sorting criteria to tailor the analysis to your specific requirements.  
 
 Each of these steps is detailed further in the following sections, ensuring you have all the information needed to successfully deploy and use the screening model.  
 <br>
