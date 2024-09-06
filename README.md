@@ -15,6 +15,7 @@ The name **"GynAIe"** is a blend of **"Gynecology"** and **"AI"**. We've chosen 
 
 
 ## 🤩 Updates
+- **`2024/09/06`**: Released instructions for using custom parameters! Detailed steps on how to apply these parameters in the `main.py` script are available in the [Usage section](#customizable-parameters) of our README.
 - **`2024/09/04`**: Released the code for conducting screening! Detailed steps on how to run the script are now available in the [Usage section](#screening) of our README.
 Please refer to the Usage section to ensure your setup is correct and to effectively use the screening code.
 - **`2024/09/01`**: Licensed under **Apache v2**. Please note, the model itself is licensed under **CC-BY-NC-SA-4.0**, so please be cautious about its use.
@@ -52,6 +53,7 @@ To effectively utilize the screening code, follow these major steps:
 2. [**Setup**](#setup): Prepare your environment and organize the necessary input data, including the tile images, as outlined in the setup instructions.
 3. [**Running the code**](#screening): Execute the `main.py` script to perform the screening based on the prepared inputs.
 4. [**Checking the results**](#screening): After running the script, examine the outputs in the `result` directory to evaluate the screening outcomes.
+5. [**Using Custom Parameters**](#customizable-parameters): Customize your screening process by adjusting various parameters available in the `main.py` script. This section guides you on how to modify parameters such as model selection, batch size, number of workers, and sorting criteria to tailor the analysis to your specific requirements.  
 
 Each of these steps is detailed further in the following sections, ensuring you have all the information needed to successfully deploy and use the screening model.  
 <br>
@@ -127,7 +129,42 @@ python preprocessing.py -u 0.3 -s 1024
     - **calculated.csv**: A file derived from `result.csv` that calculates additional metrics such as anomaly scores.
 
     **Please review the contents of the `result` directory to evaluate the screening outcomes.**
+<br>
 
+### Customizable Parameters
+
+<details><summary>The following parameters can be adjusted to customize the behavior of the script according to your specific needs:</summary>
+
+- **`--model_name`**: Specifies the model to be used for processing. Default is **`GynAIe-preview-clip-vit-large-patch14-336-8bit`**. You can switch to alternative models as they become available in future updates.
+
+- **`--batch_size`**: Sets the number of images processed in one batch. Default is `32`. Adjusting the batch size can help balance between memory usage and processing speed.
+
+- **`--num_workers`**: Determines the number of worker processes for loading data. Default is half of the available CPU cores, calculated as `os.cpu_count()//2`. This setting can optimize data loading efficiency and overall processing speed.
+
+- **`--min_image_count`**: Sets the minimum number of images required to avoid being classified as inadequate. Default is `50`. Cases with fewer images than this number are marked as inadequate. This parameter helps ensure that each case analyzed has sufficient data to maintain quality in the screening results.
+
+- **`--sort_by`** and **`--sort_ascending`**: Controls the sorting of results. By default, results are sorted by `anomaly_score` in descending order, and by age in ascending order if scores are close. Sorting by `anomaly_score` is crucial, and you can adjust ascending or descending order based on your preference. It is also possible to include additional parameters for sorting; in such cases, ensure that corresponding columns are created in the CSV file.
+
+    - Sorting by custom parameters in the CSV file:  
+      You can sort the results using any parameter included in your CSV file. To accomplish this, first ensure that the desired column is present in the CSV file. Then specify the column name using the `--sort_by` option and set the sort order with `--sort_ascending`.
+
+       **Important Notes**:
+        - `anomaly_score` should always be used as the primary sorting criterion to maintain consistency in results prioritization.
+        - Sorting criteria should be specified in a list format. This ensures that the sorting logic is applied correctly and in the intended order.
+
+       **Example**:
+        If you want to sort by a custom parameter called `new_column`, you can use the following command:
+        
+        | case       | age | new_column |
+        | ---------- | --- | ---------- |
+        | c202400001 | 35  |     1      |
+        | c202400002 | 88  |     2      |
+
+        ```bash
+          python3 main.py --sort_by ['anomaly_score', 'age', 'nwe_column'] --sort_ascending [False, True, True]
+        ```
+</details>
+<br>
 
 ## 📆 TODO
 - [x] Publication of a paper
