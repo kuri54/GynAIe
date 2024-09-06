@@ -53,7 +53,7 @@ To effectively utilize the screening code, follow these major steps:
 2. [**Setup**](#setup): Prepare your environment and organize the necessary input data, including the tile images, as outlined in the setup instructions.
 3. [**Running the code**](#screening): Execute the `main.py` script to perform the screening based on the prepared inputs.
 4. [**Checking the results**](#screening): After running the script, examine the outputs in the `result` directory to evaluate the screening outcomes.
-5. [**Using Custom Parameters**](#customizable-parameters): Customize your screening process by adjusting various parameters available in the `main.py` script. This section guides you on how to modify parameters such as model selection, batch size, number of workers, and sorting criteria to tailor the analysis to your specific requirements.  
+5. [**Using custom parameters**](#customizable-parameters): Customize your screening process by adjusting various parameters available in the `main.py` script. This section guides you on how to modify parameters such as model selection, batch size, number of workers, and sorting criteria to tailor the analysis to your specific requirements.  
 
 Each of these steps is detailed further in the following sections, ensuring you have all the information needed to successfully deploy and use the screening model.  
 <br>
