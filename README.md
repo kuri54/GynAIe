@@ -131,7 +131,7 @@ python preprocessing.py -u 0.3 -s 1024
     **Please review the contents of the `result` directory to evaluate the screening outcomes.**
 <br>
 
-### Customizable Parameters
+### Customizable parameters
 
 <details><summary>The following parameters can be adjusted to customize the behavior of the script according to your specific needs:</summary>
 
