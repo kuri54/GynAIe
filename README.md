@@ -170,6 +170,7 @@ python preprocessing.py -u 0.3 -s 1024
 - [x] Publication of a paper
 - [x] Add paper highlights and images
 - [x] Release model
+- [ ] Release MLX version model
 - [x] Granting of a license
 - [x] Release usage documentation
   - [x] Add requirements
