@@ -55,6 +55,9 @@ class Evaluater():
 
         # for inputs in tqdm(data_loader):
         for inputs in track(data_loader):
+            if next(model.parameters()).device.type == 'mps':
+                inputs.to('mps')
+
             with torch.no_grad():
                 outputs = model(pixel_values=inputs['pixel_values'].squeeze(),
                                 input_ids=inputs['input_ids'][0].squeeze()

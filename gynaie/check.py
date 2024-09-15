@@ -24,15 +24,16 @@ def log_message(message, level='info'):
 def handle_error_and_exit():
     tb = traceback.format_exc()
     last_line = tb.strip().split('\n')[-1]
-    # print(last_line)
     log_message(last_line, 'error')
     sys.exit(1)
 
-def check_supported_model(model_name):
-    if model_name not in base_model:
-        supported_models = ', '.join(get_supported_models())
+def check_supported_model(model_name, platform_info):
+    supported_models = get_supported_models(platform_info)
 
-        raise ValueError(f'Unsupported model {model_name}. Supported models are: {supported_models}')
+    if model_name not in supported_models:
+        supported_models = ', '.join(supported_models)
+
+        raise ValueError(f'Unsupported model {model_name}. Supported models for {platform_info} are: {supported_models}')
 
 def check_csv_exists(case_csv):
     if not case_csv:
@@ -57,3 +58,7 @@ def check_case_counts_match(case_df, path_df):
 
     if csv_case_count != path_case_count:
         raise ValueError(f'The number of unique cases in CSV ({csv_case_count}) does not match the unique cases in path_df ({path_case_count}).')
+
+def check_supported_os(platform_info):
+    if platform_info == 'Unsupported OS':
+        raise ValueError(f'{platform_info}. Supported platform: Apple Silicon Mac or Linux')

@@ -1,8 +1,10 @@
 import pandas as pd
+import platform
 from natsort import natsorted
 from pathlib import Path
 from gynaie.check import handle_error_and_exit, check_supported_model, check_csv_exists
 from gynaie.check import check_single_csv, check_csv_name_matches_directory, check_case_counts_match
+from gynaie.check import check_supported_os
 from gynaie.models import base_model
 from gynaie.check import log_message
 
@@ -69,11 +71,15 @@ def get_image_path_to_df(input_dir):
 
     return path_df, case_df, case_name
 
-def get_model_id(model_name):
-    check_supported_model(model_name) # Check if the model name is supported.
-    log_message(f'Model: {model_name}', 'notice')
+def get_model_id(model_name, platform_info):
+    try:
+        check_supported_model(model_name, platform_info) # Check if the model name is supported.
+        model_id = base_model.get(model_name, {}).get('model_id', {}).get(platform_info)
+        log_message(f'Model: {model_id}', 'notice')
+    except Exception:
+        handle_error_and_exit()
 
-    return base_model.get(model_name, {}).get('model_id')
+    return model_id
 
 def get_label(model_name):
     return base_model.get(model_name, {}).get('label')
@@ -81,3 +87,20 @@ def get_label(model_name):
 def save_df(result_df, calculated_df, result_dir, case_name):
     result_df.to_csv(f'{result_dir}/{case_name}/{case_name}_result.csv', index=False)
     calculated_df.to_csv(f'{result_dir}/{case_name}/{case_name}_calculated.csv', index=False)
+
+def get_platform():
+    system_info = platform.system()
+    machine_info = platform.machine()
+
+    if system_info == 'Darwin' and machine_info == 'arm64':
+        platform_info = 'Apple Silicon Mac'
+
+    elif system_info =='Linux':
+        platform_info = 'Linux'
+
+    else:
+        platform_info = 'Unsupported OS'
+
+    check_supported_os(platform_info)
+
+    return platform_info
