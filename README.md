@@ -96,7 +96,7 @@ This will install the latest version of Python that is compatible with Apple Sil
       pip install -r requirements.txt
       ```
 
-3. **Arranging tile images and creating a CSV file**
+2. **Arranging tile images and creating a CSV file**
    -  Organize the generated tile images as illustrated below:
        <pre>
         .
