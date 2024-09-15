@@ -70,7 +70,7 @@ python preprocessing.py -u 0.3 -s 1024
 <br>
 
 ### 💻 Setup
-**For Apple Silicon Mac**  
+**Optional:**　For Apple Silicon Mac  
 To set up the environment on Apple Silicon Macs, follow these steps. You can install Python using Homebrew, a package manager for macOS.
 Open the Terminal and run the following command:
 ```bash
@@ -85,7 +85,7 @@ This will install the latest version of Python that is compatible with Apple Sil
       ```bash
       cd GynAIe
       ```
-   - Setup a virtual environment (if not using Docker):  
+   - **Optional:**　Setup a virtual environment (if not using Docker):  
      It is recommended to set up a virtual environment to manage dependencies locally without affecting the rest of your system. Use the following commands to create and activate a virtual environment.
      ```bash
      python3 -m venv venv
