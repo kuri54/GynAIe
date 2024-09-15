@@ -15,6 +15,7 @@ The name **"GynAIe"** is a blend of **"Gynecology"** and **"AI"**. We've chosen 
 
 
 ## 🤩 Updates
+- **`2024/09/06`**: Released the [MLX Version Model](https://huggingface.co/kuri54/mlx-GynAIe-preview-clip-vit-large-patch14-336)! Alongside this release, we've conducted significant code revisions to optimize compatibility and performance. As a result, GynAIe is now operational on Apple Silicon Macs!
 - **`2024/09/06`**: Released instructions for using custom parameters! Detailed steps on how to apply these parameters in the `main.py` script are available in the [Usage section](#%EF%B8%8F-customizable-parameters) of our README.
 - **`2024/09/04`**: Released the code for conducting screening! Detailed steps on how to run the script are now available in the [Usage section](#-screening) of our README.
 Please refer to the Usage section to ensure your setup is correct and to effectively use the screening code.
@@ -69,18 +70,33 @@ python preprocessing.py -u 0.3 -s 1024
 <br>
 
 ### 💻 Setup
+**For Apple Silicon Mac**  
+To set up the environment on Apple Silicon Macs, follow these steps. You can install Python using Homebrew, a package manager for macOS.
+Open the Terminal and run the following command:
+```bash
+brew install python
+```
+
+This will install the latest version of Python that is compatible with Apple Silicon. After installation, you can verify the Python version by running ```python3 --version``` in the Terminal to ensure it’s correctly installed.
+
 1. **Installation**: 
    - Clone this repository.
    - Navigate to the cloned directory.
       ```bash
       cd GynAIe
       ```
+   - Setup a virtual environment (if not using Docker):  
+     It is recommended to set up a virtual environment to manage dependencies locally without affecting the rest of your system. Use the following commands to create and activate a virtual environment.
+     ```bash
+     python3 -m venv venv
+     source venv/bin/activate
+     ```
    - Install the necessary libraries and dependencies as listed in `requirements.txt`.
       ```bash
       pip install -r requirements.txt
       ```
 
-2. **Arranging tile images and creating a CSV file**
+3. **Arranging tile images and creating a CSV file**
    -  Organize the generated tile images as illustrated below:
        <pre>
         .
@@ -170,7 +186,7 @@ python preprocessing.py -u 0.3 -s 1024
 - [x] Publication of a paper
 - [x] Add paper highlights and images
 - [x] Release model
-- [ ] Release MLX version model
+- [x] Release MLX version model
 - [x] Granting of a license
 - [x] Release usage documentation
   - [x] Add requirements
