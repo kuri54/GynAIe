@@ -151,7 +151,7 @@ This will install the latest version of Python that is compatible with Apple Sil
 
 <details><summary>The following parameters can be adjusted to customize the behavior of the script according to your specific needs:</summary>
 
-- **`--model_name`**: Specifies the model to be used for processing. Default is **`GynAIe-preview-clip-vit-large-patch14-336-8bit`**. You can switch to alternative models as they become available in future updates.
+- **`--model_name`**: Specifies the model to be used for processing. Default is **`GynAIe-preview-clip-vit-large-patch14-336`**. You can switch to alternative models as they become available in future updates.
 
 - **`--batch_size`**: Sets the number of images processed in one batch. Default is `32`. Adjusting the batch size can help balance between memory usage and processing speed.
 
