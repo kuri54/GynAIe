@@ -5,6 +5,13 @@ base_model = {
             'Apple Silicon Mac': 'kuri54/mlx-GynAIe-preview-clip-vit-large-patch14-336'
             },
             'label':['a image of a normal', 'a image of a abnormal']},
+
+    'GynAIe-preview-B16-5k': {
+        'model_id': {
+            'Linux': 'kuri54/GynAIe-preview-B16-5k',
+            'Apple Silicon Mac': 'kuri54/mlx-GynAIe-preview-B16-5k'
+            },
+            'label':['a image of a normal', 'a image of a anomaly']},
     }
 
 def get_supported_models(platform_info):

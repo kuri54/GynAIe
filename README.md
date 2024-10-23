@@ -15,6 +15,7 @@ The name **"GynAIe"** is a blend of **"Gynecology"** and **"AI"**. We've chosen 
 
 
 ## 🤩 Updates
+- **`2024/10/23`**: Released the preview version of our new core model! This model has been optimized for use on Apple Silicon Macs as well. The new model is lighter and faster than its predecessors, yet it maintains similar or slightly improved accuracy! However, due to considerable imbalance in the training data, we are releasing it as a preview version. Please wait a little longer for the official release. For detailed performance information about the model, please visit [GynAIe/performance](https://github.com/kuri54/GynAIe/tree/main/performance).
 - **`2024/09/06`**: Released the [MLX Version Model](https://huggingface.co/kuri54/mlx-GynAIe-preview-clip-vit-large-patch14-336)! Alongside this release, we've conducted significant code revisions to optimize compatibility and performance. As a result, GynAIe is now operational on Apple Silicon Macs!
 - **`2024/09/06`**: Released instructions for using custom parameters! Detailed steps on how to apply these parameters in the `main.py` script are available in the [Usage section](#%EF%B8%8F-customizable-parameters) of our README.
 - **`2024/09/04`**: Released the code for conducting screening! Detailed steps on how to run the script are now available in the [Usage section](#-screening) of our README.
@@ -151,7 +152,7 @@ This will install the latest version of Python that is compatible with Apple Sil
 
 <details><summary>The following parameters can be adjusted to customize the behavior of the script according to your specific needs:</summary>
 
-- **`--model_name`**: Specifies the model to be used for processing. Default is **`GynAIe-preview-clip-vit-large-patch14-336`**. You can switch to alternative models as they become available in future updates.
+- **`--model_name`**: Specifies the model to be used for processing. Default is **`GynAIe-preview-B16-5k`**. You can switch to alternative models as they become available in future updates.
 
 - **`--batch_size`**: Sets the number of images processed in one batch. Default is `32`. Adjusting the batch size can help balance between memory usage and processing speed.
 
