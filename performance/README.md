@@ -7,7 +7,7 @@
 
 ## Results
 
-| Model name                                                                                                                     | Quantization       | Inference Time<br>RTX A6000 | Inference Time<br>M2 Ultra 192GB | Results images |
+| Model name                                                                                                                     | Quantization       | Inference time<br>RTX A6000 | Inference time<br>M2 Ultra 192GB | Results images |
 | :----------------------------------------------------------------------------------------------------------------------------- | :----------------: | :-------------------------: | :------------------------------: | :------------: |
 | [GynAIe-preview-clip-vit-large-patch14-336-8bit](https://huggingface.co/kuri54/GynAIe-preview-clip-vit-large-patch14-336-8bit) | :white_check_mark: | 00:01:22                    | -                                |                |
 | [mlx-GynAIe-preview-clip-vit-large-patch14-336](https://huggingface.co/kuri54/mlx-GynAIe-preview-clip-vit-large-patch14-336)   |                    | -                           | 00:02:45                         |                |
