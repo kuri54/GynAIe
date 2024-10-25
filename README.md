@@ -60,7 +60,7 @@ To effectively utilize the screening code, follow these major steps:
 3. [**Running the code**](#-screening): Execute the `gynaie-run` script to perform the screening based on the prepared inputs.
 4. [**Checking the results**](#-screening): After running the script, examine the outputs in the `result` directory to evaluate the screening outcomes.
 5. [**Using custom parameters**](#%EF%B8%8F-customizable-parameters): Customize your screening process by adjusting various parameters available in the `gynaie-run` script. This section guides you on how to modify parameters such as model selection, batch size, number of workers, and sorting criteria to tailor the analysis to your specific requirements.
-6. **Reviewing screening results**: Review the analysis results using the viewer.
+6. [**Reviewing screening results**](#-reviewing-screening-results): Review the analysis results using the viewer.
 
 Each of these steps is detailed further in the following sections, ensuring you have all the information needed to successfully deploy and use the screening model.  
 <br>
