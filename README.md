@@ -15,6 +15,10 @@ The name **"GynAIe"** is a blend of **"Gynecology"** and **"AI"**. We've chosen 
 
 
 ## 🤩 Updates
+- **`2024/10/25`**: **Changes to setup and viewer release** 
+  - **Changes to GynAIe’s setup:** We’ve changed the way you launch GynAIe. It’s nothing complicated—just type `gynaie-run --input_dir ...` ! Due to changes in the installation process of the package, please check the [Setup](#-setup) for details. Those who have previously used GynAIe will need to reinstall.
+  - **Viewer implementation:** We have implemented a viewer to easily review images after analysis! For detailed instructions on how to use the viewer, please check [here](https://github.com/kuri54/GynAIe/tree/main/gynaie/viewer). The usage is simple: just type `gynaie-viewer` !
+
 - **`2024/10/23`**: Released the preview version of our new core model! This model has been optimized for use on Apple Silicon Macs as well. The new model is lighter and faster than its predecessors, yet it maintains similar or slightly improved accuracy! However, due to considerable imbalance in the training data, we are releasing it as a preview version. Please wait a little longer for the official release. For detailed performance information about the model, please visit [GynAIe/performance](https://github.com/kuri54/GynAIe/tree/main/performance).
 - **`2024/09/06`**: Released the [MLX Version Model](https://huggingface.co/kuri54/mlx-GynAIe-preview-clip-vit-large-patch14-336)! Alongside this release, we've conducted significant code revisions to optimize compatibility and performance. As a result, GynAIe is now operational on Apple Silicon Macs!
 - **`2024/09/06`**: Released instructions for using custom parameters! Detailed steps on how to apply these parameters in the `main.py` script are available in the [Usage section](#%EF%B8%8F-customizable-parameters) of our README.
@@ -53,9 +57,10 @@ To effectively utilize the screening code, follow these major steps:
 
 1. [**Generating tile images**](#%EF%B8%8F-generating-tile-images): Start by generating tile images from your source data, which will be used for the screening process.
 2. [**Setup**](#-setup): Prepare your environment and organize the necessary input data, including the tile images, as outlined in the setup instructions.
-3. [**Running the code**](#-screening): Execute the `main.py` script to perform the screening based on the prepared inputs.
+3. [**Running the code**](#-screening): Execute the `gynaie-run` script to perform the screening based on the prepared inputs.
 4. [**Checking the results**](#-screening): After running the script, examine the outputs in the `result` directory to evaluate the screening outcomes.
-5. [**Using custom parameters**](#%EF%B8%8F-customizable-parameters): Customize your screening process by adjusting various parameters available in the `main.py` script. This section guides you on how to modify parameters such as model selection, batch size, number of workers, and sorting criteria to tailor the analysis to your specific requirements.  
+5. [**Using custom parameters**](#%EF%B8%8F-customizable-parameters): Customize your screening process by adjusting various parameters available in the `gynaie-run` script. This section guides you on how to modify parameters such as model selection, batch size, number of workers, and sorting criteria to tailor the analysis to your specific requirements.
+6. **Reviewing screening results**: Review the analysis results using the viewer.
 
 Each of these steps is detailed further in the following sections, ensuring you have all the information needed to successfully deploy and use the screening model.  
 <br>
@@ -92,9 +97,9 @@ This will install the latest version of Python that is compatible with Apple Sil
      python3 -m venv venv
      source venv/bin/activate
      ```
-   - Install the necessary libraries and dependencies as listed in `requirements.txt`.
+   - Install the necessary libraries and dependencies.
       ```bash
-      pip install -r requirements.txt
+      pip install -e .
       ```
 
 2. **Arranging tile images and creating a CSV file**
@@ -132,14 +137,14 @@ This will install the latest version of Python that is compatible with Apple Sil
 
 ### 🔬 Screening
 1. Running the code
-    To execute the model, use the following command in your terminal. This command runs the `main.py` script and specifies the input directory where your tile images are stored:
+    To execute the model, use the following command in your terminal. This command runs the `gynaie-run` script and specifies the input directory where your tile images are stored:
 
     ```bash
-    python3 main.py --input_dir input/20240904
+    gynaie-run --input_dir input/20240904
     ```
 
 2. Checking the results
-   After successfully running `main.py`, a directory named `result` will be created. This directory contains the following outputs:
+   After successfully running `gynaie-run`, a directory named `result` will be created. This directory contains the following outputs:
     
     - **Sorted images**: Images displaying the sorted cases based on the screening results, illustrating how each case ranks according to the evaluated criteria.
     - **result.csv**: A data file containing all the decision data for each image.
@@ -183,6 +188,11 @@ This will install the latest version of Python that is compatible with Apple Sil
 </details>
 <br>
 
+### 💻 Reviewing screening results
+You can review the analysis results using the viewer. Simply type `gynaie-viewer`, and a browser-based viewer will automatically launch.  
+For detailed instructions and important notes, please check [here](https://github.com/kuri54/GynAIe/tree/main/gynaie/viewer).  
+<br>
+
 ## 📆 TODO
 - [x] Publication of a paper
 - [x] Add paper highlights and images
@@ -193,7 +203,7 @@ This will install the latest version of Python that is compatible with Apple Sil
   - [x] Add requirements
   - [x] Tile image generation code
   - [x] Screening code
-- [ ] Release Streamlit-based screening workflow
+- [x] Release Streamlit-based screening workflow
 
 ## 🎉 Citation
 

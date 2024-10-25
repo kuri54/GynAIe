@@ -18,7 +18,9 @@ parser.add_argument('--min_image_count', type= int, default=50,
 parser.add_argument('--sort_by', default=['anomaly_score', 'age'])
 parser.add_argument('--sort_ascending', default=[False, True])
 
-def main():
+def run():
+    args = parser.parse_args()
+
     print_logo()
 
     platform_info = get_platform()
@@ -52,6 +54,4 @@ def main():
     log_message(f"{case_df['case'].nunique()} cases have been successfully screening! Check the output files for detailed results.", 'notice')
 
 if __name__ == '__main__':
-    args = parser.parse_args()
-
-    main()
+    run()
