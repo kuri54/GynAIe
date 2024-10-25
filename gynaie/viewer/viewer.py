@@ -17,10 +17,10 @@ def load_available_dirs():
 def run():
     available_dirs = load_available_dirs()
 
-    st.title('GynAIe Image Explorer')
+    st.title('GynAIe Image Viewer')
 
     if available_dirs:
-        selected_dir = st.sidebar.selectbox('Select a directory to explore:', available_dirs)
+        selected_dir = st.sidebar.selectbox('Select a directory:', available_dirs)
 
         if selected_dir:
             RESULT_DIR = RESULT_ROOT_DIR / selected_dir
