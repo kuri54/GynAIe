@@ -16,17 +16,18 @@ install_requires = [
     'rich',
     'scikit-learn',
     'seaborn',
+    'streamlit'
 ]
 
 setup(
     name="GynAIe",
     version="0.0.1",
-    packages=find_packages('gynaie'),
+    packages=find_packages(),
     install_requires=install_requires,
     entry_points={
         "console_scripts": [
-            "gynaie run = gynaie.main:run",
-            "gynaie exproler = gynaie.exproler:run"
+            "gynaie-run = gynaie.main:run",
+            "gynaie-explorer = gynaie.explorer.explorer_run:run"
         ]
     }
 )
