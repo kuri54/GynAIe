@@ -20,14 +20,14 @@ install_requires = [
 ]
 
 setup(
-    name="GynAIe",
-    version="0.0.1",
+    name='GynAIe',
+    version='0.0.1',
     packages=find_packages(),
     install_requires=install_requires,
     entry_points={
-        "console_scripts": [
-            "gynaie-run = gynaie.main:run",
-            "gynaie-explorer = gynaie.explorer.explorer_run:run"
+        'console_scripts': [
+            'gynaie-run = gynaie.main:run',
+            'gynaie-viewer = gynaie.viewer.viewer_run:run'
         ]
     }
 )
