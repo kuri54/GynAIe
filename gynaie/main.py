@@ -18,7 +18,7 @@ parser.add_argument('--min_image_count', type= int, default=50,
 parser.add_argument('--sort_by', default=['anomaly_score', 'age'])
 parser.add_argument('--sort_ascending', default=[False, True])
 
-def main():
+def run():
     print_logo()
 
     platform_info = get_platform()
@@ -54,4 +54,4 @@ def main():
 if __name__ == '__main__':
     args = parser.parse_args()
 
-    main()
+    run()
