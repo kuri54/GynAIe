@@ -15,7 +15,7 @@ The name **"GynAIe"** is a blend of **"Gynecology"** and **"AI"**. We've chosen 
 
 
 ## 🤩 Updates
-- **`2024/11/3`**: **Updated the viewer!**
+- **`2024/11/03`**: **Updated the viewer!**
   - **Implemented Checkboxes**: We've implemented **checkboxes**, making it easy to see which images screened by GynAIe have been checked.
   - **Enhanced Performance with Caching**: We've enabled the viewer to operate while caching images, which should make its performance a bit lighter!
   
