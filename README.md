@@ -15,6 +15,10 @@ The name **"GynAIe"** is a blend of **"Gynecology"** and **"AI"**. We've chosen 
 
 
 ## 🤩 Updates
+- **`2024/11/23`**: **Updated the viewer!**
+  - **Implemented Checkboxes**: We've implemented **checkboxes**, making it easy to see which images screened by GynAIe have been checked.
+  - **Enhanced Performance with Caching**: We've enabled the viewer to operate while caching images, which should make its performance a bit lighter!
+  
 - **`2024/10/25`**: **Changes to setup and viewer release** 
   - **Changes to GynAIe’s setup:** We’ve changed the way you launch GynAIe. It’s nothing complicated—just type `gynaie-run --input_dir ...` ! Due to changes in the installation process of the package, please check the [Setup](#-setup) for details. Those who have previously used GynAIe will need to reinstall.
   - **Viewer implementation:** We have implemented a viewer to easily review images after analysis! For detailed instructions on how to use the viewer, please check [here](https://github.com/kuri54/GynAIe/tree/main/gynaie/viewer). The usage is simple: just type `gynaie-viewer` !
