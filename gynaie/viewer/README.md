@@ -14,6 +14,9 @@ Apply filters to the image list to display only those images that meet certain c
 4. Image Enlargement:  
 Hovering over an image displays a magnification button. You can also enlarge images of sorting results.
 
+5. Checking Images:  
+After viewing images in the viewer, please make sure to check the checkbox. This will help you keep track of which images have been reviewed and prevent forgetting where you left off.
+
 ## Important Notes
 - **Supported Directories:** Currently, only images stored in the `GynAIe/input` directory can be displayed. Support for other directories is planned for the future, but it is a low priority at this moment.
 - **How to Exit:** After viewing the images, please close the browser and either close the terminal window or press `Ctrl + C` to terminate the task.
