@@ -15,6 +15,12 @@ The name **"GynAIe"** is a blend of **"Gynecology"** and **"AI"**. We've chosen 
 
 
 ## 🤩 Updates
+- **`2024/11/05`**: **It's here! The official version of our model is finally released!** 🎉🎉🎉🎉🎉  
+  We’re thrilled to announce that the official version of our model is now available!  
+  - **Improved and balanced data**: We’ve increased the dataset size and balanced it out, so this version is more robust than the preview.  
+  - **Stable performance**: While the preview had a bit of a “peaky” performance, we believe this official version brings the stability we were aiming for!  
+  - **Check the performance**: You can check the model's performance by following the link on our [performance page](https://github.com/kuri54/GynAIe/tree/main/performance)!
+
 - **`2024/11/03`**: **Updated the viewer!**
   - **Implemented Checkboxes**: We've implemented **checkboxes**, making it easy to see which images screened by GynAIe have been checked.
   - **Enhanced Performance with Caching**: We've enabled the viewer to operate while caching images, which should make its performance a bit lighter!
@@ -161,7 +167,7 @@ This will install the latest version of Python that is compatible with Apple Sil
 
 <details><summary>The following parameters can be adjusted to customize the behavior of the script according to your specific needs:</summary>
 
-- **`--model_name`**: Specifies the model to be used for processing. Default is **`GynAIe-preview-B16-5k`**. You can switch to alternative models as they become available in future updates.
+- **`--model_name`**: Specifies the model to be used for processing. Default is **`GynAIe-B16-8k`**. You can switch to alternative models as they become available in future updates.
 
 - **`--batch_size`**: Sets the number of images processed in one batch. Default is `32`. Adjusting the batch size can help balance between memory usage and processing speed.
 
