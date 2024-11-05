@@ -10,7 +10,7 @@ from gynaie.viz import Vis
 parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 parser.add_argument('--input_dir', type= str, required=True)
 parser.add_argument('--result_dir', type= str, default='result')
-parser.add_argument('--model_name', type= str, default='GynAIe-preview-B16-5k')
+parser.add_argument('--model_name', type= str, default='GynAIe-B16-8k')
 parser.add_argument('--batch_size', type= int, default=32)
 parser.add_argument('--num_workers', default=os.cpu_count()//2)
 parser.add_argument('--min_image_count', type= int, default=50,
