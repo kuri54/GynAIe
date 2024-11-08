@@ -7,7 +7,7 @@ install_requires = [
     'torchaudio==2.3.0',
     'torchvision==0.18.0',
     'transformers==4.44.2',
-    'streamlit==1.39.0'
+    'streamlit==1.39.0', 
     'bitsandbytes',
     'matplotlib',
     'mlx',
