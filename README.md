@@ -3,7 +3,7 @@
 
 <picture>
   <source media="(prefers-color-scheme: light)" srcset="/assets/GynAIe_logo.PNG">
-  <img alt="exo logo" src="/assets/GynAIe_logo.PNG" width="30%" height="30%">
+  <img alt="GynAIe logo" src="/assets/GynAIe_logo.PNG" width="30%" height="30%">
 </picture> 
 
 **"Magical AI for women worldwide."**
